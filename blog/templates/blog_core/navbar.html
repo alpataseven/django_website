@@ -1,0 +1,21 @@
+{% load static %}
+<header><!--Header-->
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'blog_page' %}">
+                <img src="{% static 'photos/kulturveedebiyat[766].png'%}" alt="Logo" width="364px" height="79px">
+            </a>
+            <ul class="nav justify-content-end mx-5">
+                <li class="nav2">
+                    <a class="nav-button fw-bold {% if request.path == '/blog_page/' %}active{% endif %}" href="{% url 'blog_page' %}">Blog</a>
+                </li>
+                <li class="nav2">
+                    <a class="nav-button fw-bold {% if request.path == '/blog/' %}active{% endif %}" href="{% url 'blog' %}">Yazı Yaz</a>
+                </li>
+                <li class="nav2">
+                    <a class="nav-button fw-bold " href="#">Çıkış Yap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,23 +18,19 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-
-    {% include 'core/navbar.html' %}
+    
+    {% include 'blog_core/navbar.html' %}
 
     {% block content %}
 
     {% endblock %}
 
-    {% include 'core/footer.html' %}
+    {% include 'blog_core/footer.html' %}
+
 
     <!--Scripts-->
     <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
     <script src="{% static 'js/popper.min.js'%}"></script>
     <script src="{% static 'js/bootstrap.min.js'%}"></script>
     <script src="{% static 'js/script.js'%}"></script>
-
-</body>
-
-</html>

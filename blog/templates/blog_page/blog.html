@@ -1,0 +1,21 @@
+{% extends 'blog_core/base.html' %}
+
+{% block title %} {{blog_title}} | {% endblock title %} <!--Title kısmını django ile aktif ettik (views.py)-->
+
+{% block content %}
+
+    <main>
+        <div class="container mt-4">
+            <form>
+                <div class="form-group">
+                    <label for="exampleTextarea">Textarea Başlığı</label>
+                    <textarea class="form-control"  id="editorTextarea" name="editorTextarea" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </div>
+    </main>
+
+    {% endblock %}
+
+    
