@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+
+{% block title %} {{title}} | {% endblock title %} <!--Title kısmını django ile aktif ettik (views.py)-->
+
+{% block content %}
+
+    <main><!--Main-->
+        <article>
+            <div class="container text-center box1">
+                <h1 class="text-uppercase fw-bold fs-3">"Edebiyat, iki ruhun arasında bir tesadüf noktasıdır."</h1>
+                <br>
+                <h1 class="text-uppercase fw-bold fs-5">Charles de Boses</h1>
+            </div>
+        </article>
+
+        <article>
+
+        </article>
+    </main>
+    <aside><!--Aside-->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="box2">
+                            <h3 class="text-uppercase fs-5 fw-bold">Misyonumuz</h3>
+                            <br>
+                            <p>Kültür ve Edebiyat Kulübü olarak misyonumuz, edebiyat ve kültürün zengin dünyasını
+                                keşfetmek ve
+                                bu alanda tutkulu olan herkesi bir araya getirmektir.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="box2">
+                            <h3 class="text-uppercase fs-5 fw-bold">Vizyonumuz</h3>
+                            </br>
+                            <p>Kültür ve Edebiyat Kulübü olarak vizyonumuz, kültürel zenginliği ve edebiyatın evrensel
+                                gücünü
+                                daha da yaygınlaştırmak için ilham veren bir topluluk oluşturmaktır. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="box2">
+                            <h3 class="text-uppercase fs-5 fw-bold">Hedeflerimiz</h3>
+                            </br>
+                            <p>Kültür ve Edebiyat Kulübü olarak hedeflerimiz, üyelerimize edebiyat dünyasının kapılarını
+                                açmak
+                                ve kültürel etkinlikler düzenleyerek üyelerimize farklı kültürler tanıtmaktır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+    {% endblock %}
+   

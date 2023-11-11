@@ -1,0 +1,18 @@
+{% load static %}
+<header>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid"> <!--urls.py dosyasındaki path içindeki name ksımından url ismi alıyoruz.-->
+            <a class="navbar-brand" href="{% url 'home' %}">  
+                <img src="{% static 'photos/kulturveedebiyat[766].png'%}" alt="Logo" width="364px" height="79px">
+            </a>
+            <ul class="nav justify-content-end mx-5">
+                <li class="nav2">
+                    <a class="nav-button fw-bold {% if request.path == '/sign_up/' %}active{% endif %}" href="{% url 'sign_up' %}">Üye Ol</a>
+                </li>
+                <li class="nav2">
+                    <a class="nav-button fw-bold {% if request.path == '/log_in/' %}active{% endif %}" href="{% url 'log_in' %}">Giriş Yap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

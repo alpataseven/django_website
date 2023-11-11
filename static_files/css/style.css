@@ -1,0 +1,195 @@
+/*Margin ve Padding değerleri sıfırlandı.*/
+
+/*HTML*/
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Onest', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1d2653;
+}
+
+/*Header*/
+
+nav {
+    height: 100px;
+    width: auto;
+    background-color: #bdc3c7;
+    opacity: 90%;
+    overflow: hidden;
+}
+
+header {
+    height: 100px;
+    width: auto;
+}
+
+.nav-button {
+    padding: 0px 15px;
+    background-color: none;
+    border: none;
+    color: #1d2653;
+    font-family: 'Onest', sans-serif;
+    text-transform: uppercase;
+    transition: color 0.4s;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    background-color: none;
+    color: #b51577;
+}
+
+.nav-button.active {
+    background-color: none;
+    color: #b51577;
+}
+
+.nav2 {
+    margin: 0 10px;
+}
+
+/*-------------------------------------------------------Main------------------------------------------------*/
+
+.box1 {
+    background-color: #f8f9fa;
+    color: #1d2653;
+    margin: 130px;
+    padding: 80px;
+    width: auto;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.box2 {
+    background-color: #f8f9fa;
+    width: 420px;
+    height: 270px;
+    color: #1d2653;
+    padding: 30px;
+    text-align: center;
+    border: 0.5px solid #1d2653;
+    border-radius: 20px;
+    transition: color 0.4s;
+}
+
+.box2:hover {
+    border: 0.5px solid #b51577;
+}
+
+/*-------------------------------------------------------Main End----------------------------------*/
+
+/*----------------------------------Sign Up---------------------------------------------------*/
+.sign_up {
+    color: #1d2653;
+    border-radius: 20px;
+    margin: 50px;
+    padding: 40px;
+    width: 300px;
+}
+
+#sign-up-button {
+    border: none;
+    background-color: #dfe6e9;
+    margin-top: 30px;
+    font-size: large;
+    color: #1d2653;
+    transition: color 0.4s;
+}
+/*----------------------------------Sign Up End---------------------------------------------------*/
+
+
+/*---------------------------------------Footer----------------------------------------------------*/
+
+.first_footer {
+    width: auto;
+    height: 200px;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: #ced6e0;
+    display: flex;
+}
+
+
+footer>div>div>a>img {
+    height: 69.18px;
+    width: 160px;
+    margin: 3.5rem;
+}
+
+/*Icon design*/
+
+.icon_list {
+    padding: 3px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 400px;
+    margin: 1px;
+}
+
+.icon_item {
+    margin: 45px 15px;
+    transition: color 0.4s;
+}
+
+.i1,
+.i2,
+.i3 {
+    color: #1d2653;
+    transition: color 0.4s;
+}
+
+.i1:hover {
+    color: #1ed760;
+}
+
+.i2:hover {
+    color: #E1306C;
+}
+
+.i3:hover {
+    color: #00e676;
+}
+
+.div_icon {
+    right: 25px;
+    top: -1px;
+}
+
+.footer_box {
+    width: auto;
+    height: 60px;
+    background-color: #b51577;
+    padding: 5px;
+}
+
+.contact {
+    width: 500px;
+    height: 116px;
+}
+
+.address {
+    width: 500px;
+    height: 116px;
+}
+
+/*---------------------------------------Footer End----------------------------------------------------*/
+
+/*------------------------------------------blog_page--------------------------------------------*/
+
+.box-blog_page {
+    height: 300px;
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #1d2653;
+}
