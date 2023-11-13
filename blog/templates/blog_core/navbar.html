@@ -13,7 +13,7 @@
                     <a class="nav-button fw-bold {% if request.path == '/blog/' %}active{% endif %}" href="{% url 'blog' %}">Yazı Yaz</a>
                 </li>
                 <li class="nav2">
-                    <a class="nav-button fw-bold " href="#">Çıkış Yap</a>
+                    <a class="nav-button fw-bold " href="{% url 'log_out' %}">Çıkış Yap</a>
                 </li>
             </ul>
         </div>

@@ -22,13 +22,22 @@
 
 <body>
 
-    {% include 'core/navbar.html' %}
+    {% include 'user_core/navbar.html' %}
+
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    {% endif %}
 
     {% block content %}
 
     {% endblock %}
 
-    {% include 'core/footer.html' %}
+    {% include 'user_core/footer.html' %}
 
     <!--Scripts-->
     <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>

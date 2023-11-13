@@ -1,4 +1,4 @@
-{% extends 'core/base.html' %}
+{% extends 'user_core/base.html' %}
 
 {% block title %} {{title}} | {% endblock title %} <!--Title kısmını django ile aktif ettik (views.py)-->
 
@@ -13,46 +13,52 @@
     <div class="container sign_up">
         <div class="row">
             <div class="col-sm-5 mx-auto">
-                <form class="row g-4">
+                <form method="post" class="row g-4">
+                    {% csrf_token %}
                     <div class="col-12">
                         <label for="inputName" class="form-label">İsim-Soyisim</label>
-                        <input type="text" class="form-control" id="inputName">
+                        <input type="text" class="form-control" id="inputName" name="name-surname"> 
                     </div>
                     <div class="col-12">
                         <label for="inputDepartment" class="form-label">Bölüm</label>
-                        <input type="text" class="form-control" id="inputDepartment"
+                        <input type="text" class="form-control" id="inputDepartment" name="department"
                             placeholder="Yönetim Bilişim Sistemleri">
                     </div>
                     <div class="col-12">
                         <label for="inputNumber" class="form-label">Öğrenci No</label>
-                        <input type="text" class="form-control" id="inputNumber" placeholder="123456789">
+                        <input type="number" class="form-control" id="inputNumber" placeholder="123456789" name="number">
                     </div>
                     <div class="col-12">
                         <label for="inputPhone" class="form-label">Telefon No</label>
-                        <input type="tel" class="form-control" id="inputPhone" placeholder="(555) 555 55 55">
+                        <input type="number" class="form-control" id="inputPhone" placeholder="(555) 555 55 55" name="phone_number">
                     </div>
                     <div class="col-12">
                         <label for="inputEmail" class="form-label">E-mail</label>
                         <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-                            placeholder="123@example.com">
+                            placeholder="123@example.com" name="email">
                     </div>
                     <div class="col-12">
                         <label for="inputPassword" class="form-label">Şifre</label>
-                        <input type="password" class="form-control" id="inputPassword">
+                        <input type="password" class="form-control" id="inputPassword" name="password"> 
                     </div>
 
                     <div class="col-12">
                         <label for="inputPassword" class="form-label">Şifreyi Tekrar Giriniz</label>
-                        <input type="password" class="form-control" id="inputPassword">
+                        <input type="password" class="form-control" id="inputPassword" name="password_confirm">
                     </div>
 
                     <div class="col-12 text-center">
                         <button type="submit" class="btn btn-outline-primary btn-sm text-uppercase">Üye Ol</button>
+                        <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-sm text-uppercase">İptal</a>
+                    </div>
+                    <div class="col-12 text-center">
+                        <hr>
+                        <h1 class="h6 fw-bold mb-3">Kulübümüze Üye misiniz?</h1>
+                        <a href="{% url 'log_in' %}" class="btn btn-outline-primary btn-sm text-uppercase">Giriş Yap</a>
                     </div>
                 </form>
             </div>
         </div>
-
     </div>
 </main>
 

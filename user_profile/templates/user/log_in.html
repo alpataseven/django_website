@@ -1,0 +1,38 @@
+{% extends 'user_core/base.html' %}
+
+{% block title %} {{title}} | {% endblock title %} <!--Title kısmını django ile aktif ettik (views.py)-->
+
+{% block content %}
+<main>
+    <div class="text-center pt-5 mt-4">
+        <h1 style="color: #1d2653;" class="text-uppercase fw-bold fs-3">Giriş Yap</h1>
+    </div>
+    <hr>
+    <div class="container sign_up">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3 mx-auto">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label for="inputNumber" class="form-label">Öğrenci No</label>
+                        <input type="number" class="form-control" id="inputNumber" name="username">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleInputPassword1" class="form-label">Şifre</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-outline-primary btn-sm text-uppercase">Giriş Yap</button>
+                        <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-sm text-uppercase">İptal</a>
+                    </div>
+                    <div class="col-12 text-center">
+                        <hr>
+                        <h1 class="h6 fw-bold mb-3">Kulübümüze Üye Olun!</h1>
+                        <a href="{% url 'sign_up' %}" class="btn btn-outline-primary btn-sm text-uppercase">Üye Ol</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
