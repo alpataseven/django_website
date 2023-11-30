@@ -16,8 +16,12 @@
                 <form method="post" class="row g-4">
                     {% csrf_token %}
                     <div class="col-12">
-                        <label for="inputName" class="form-label">İsim-Soyisim</label>
-                        <input type="text" class="form-control" id="inputName" name="name-surname"> 
+                        <label for="inputName" class="form-label">İsim</label>
+                        <input type="text" class="form-control" id="inputName" name="name"> 
+                    </div>
+                    <div class="col-12">
+                        <label for="inputName" class="form-label">Soyisim</label>
+                        <input type="text" class="form-control" id="inputName" name="surname"> 
                     </div>
                     <div class="col-12">
                         <label for="inputDepartment" class="form-label">Bölüm</label>
