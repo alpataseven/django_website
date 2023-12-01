@@ -1,21 +1,35 @@
 {% extends 'blog_core/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% block title %} {{blog_title}} | {% endblock title %} <!--Title kısmını django ile aktif ettik (views.py)-->
 
 {% block content %}
+    <link rel="stylesheet" href="{%static 'css/tagify.css'%}">
+    <div class="text-center pt-5 mx-5">
+        <h1 style="color: #1d2653;" class="text-uppercase fw-bold fs-3">Blog Yaz</h1>
+    </div>
+    <hr>
+
 
     <main>
         <div class="container mt-4">
-            <form>
-                <div class="form-group">
-                    <label for="exampleTextarea">Textarea Başlığı</label>
-                    <textarea class="form-control"  id="editorTextarea" name="editorTextarea" rows="4"></textarea>
-                </div>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form | crispy }}
                 <button type="submit" class="btn btn-primary">Gönder</button>
             </form>
         </div>
     </main>
 
+    <script src="{% static 'js/tagify.polyfills.min' %}"></script>
+    <script src="{% static 'js/tagify.js' %}"></script>
+
+    <script>
+        var input = document.querySelector('input[name=tag]');
+        new Tagify(input)
+    </script>
     {% endblock %}
 
     
