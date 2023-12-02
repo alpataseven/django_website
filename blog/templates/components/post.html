@@ -1,0 +1,40 @@
+{% load thumbnail %}
+<div class="col-sm-8">
+    <div class="mb-3" style="width: 580px;">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ post.cover_image|thumbnail_url:'thumbnail'}}"
+                    class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div>
+                    <h5 class="mt-3 mb-4 fw-bold h6 text-uppercase">{{post.title}}</h5>
+                    <p class="card-text">{{ post.content|safe|truncatewords_html:10 }}</p>
+                    <hr>
+                    <a href="#" class="text-decoration-none text-body-tertiary">
+                        <small class="ms-1">
+                            {{post.user.get_full_name}}
+                        </small>
+                    </a>
+                    <ul class="list-inline" style="font-size: 12px; opacity: 0.4;">
+                        <li class="list-inline-item">{{ current_time }}</li>
+                        <li class="list-inline-item"><a href="#">
+                            <span class="badge bg-secondary">
+                                {{ post.category }}
+                            </span>
+                        </a></li>
+                        <li class="list-inline-item fs-12">
+                            {{ post.view_count }} 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eyeglasses" viewBox="0 0 16 16">
+                                <path d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A1.993 1.993 0 0 0 8 6c-.532 0-1.016.208-1.375.547zM14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                              </svg>
+                        </li>
+                        <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                          </svg></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

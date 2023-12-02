@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from autoslug import AutoSlugField
 from tinymce import models as tinymce_models
+from django.utils import timezone
 
 
 class CommonModel(models.Model):
@@ -49,6 +50,7 @@ class BlogPost(CommonModel):
     cover_image = models.ImageField(upload_to='post')
     content = tinymce_models.HTMLField(blank=True, null=True) 
     view_count = models.PositiveBigIntegerField(default=0)
+    pub_date = models.DateTimeField('date published', default=timezone.now)
 
     def __str__(self):
         return self.title
