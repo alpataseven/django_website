@@ -7,5 +7,3 @@ class user_profile(models.Model):
     avatar = models.ImageField(upload_to='avatar')
     slug = models.SlugField(max_length=200)
                          
-
-    
