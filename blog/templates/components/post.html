@@ -11,7 +11,7 @@
                     <h5 class="mt-3 mb-4 fw-bold h6 text-uppercase">{{post.title}}</h5>
                     <p class="card-text">{{ post.content|safe|truncatewords_html:10 }}</p>
                     <hr>
-                    <a href="#" class="text-decoration-none text-body-tertiary">
+                    <a href="{{ post.user.profile.get_absolute_url }}" class="text-decoration-none text-body-tertiary">
                         <small class="ms-1">
                             {{post.user.get_full_name}}
                         </small>
